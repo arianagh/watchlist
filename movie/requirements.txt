@@ -10,6 +10,7 @@ certifi==2024.8.30
 cfgv==3.4.0
 charset-normalizer==3.4.0
 click==8.1.7
+coverage==7.6.9
 dependency-injector==4.44.0
 Deprecated==1.2.15
 distlib==0.3.9
@@ -65,6 +66,7 @@ pydantic_core==2.27.1
 pymongo==4.9.2
 pytest==8.3.4
 pytest-asyncio==0.24.0
+pytest-cov==6.0.0
 pytest-mock==3.14.0
 pytest-postgresql==6.1.1
 python-dotenv==1.0.1
