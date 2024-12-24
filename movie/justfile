@@ -1,10 +1,9 @@
 coverage:
-    pytest --cov=myapp --cov-report=term-missing --cov-report=xml:coverage.xml tests/
+    pytest --cov=movie --cov-report=term-missing --cov-report=xml:coverage.xml tests/
 
 coverage-int:
-    @coverage_output=$(pytest --cov=myapp --cov-report=term --disable-warnings tests/ | tail -n 10 | grep -oP '\d+\.\d+(?=%)'); \
-    echo "Coverage percentage: $coverage_output%"; \
-    echo "Coverage number: $(echo $coverage_output | cut -d'.' -f1)" > coverage.txt
+    @coverage_output=$(pytest --cov=movie --cov-report=term --disable-warnings tests/ | grep "TOTAL" | awk '{print $4}' | sed 's/%//'); \
+    echo "$coverage_output";
 
 makemigrations arg="":
     bash ./commands/makemigrations.sh {{ arg }}

@@ -22,5 +22,5 @@ elif DATABASE_TYPE == 'postgresql':
 
 else:
     raise RuntimeError(
-        f'Invalid database type \'{DATABASE_TYPE}\' provided in DATABASE_URI: {settings.DATABASE_URL}'
+        f'Invalid database type \'{DATABASE_TYPE}\' provided in DATABASE_URL: {settings.DATABASE_URL}'
     )
